@@ -1,0 +1,24 @@
+<% include ./partials/header.ejs%>
+
+<div class="w-full min-h-screen bg-zinc-800 px-10 py-5 text-white">
+</head>
+<body>
+<div class="container max-w-2xl mx-auto my-4 bg-gray-300 rounded-lg shadow-lg p-10">
+    <h1 class="text-center mb-8 text-3xl text-gray-900">Create a New Post</h1>
+    <form class="flex flex-col" action="/createpost" method="post" enctype="multipart/form-data">
+
+        <label class="block text-lg mb-1 font-medium text-gray-700" for="file">Upload here:</label>
+    <input class="appearance-none block w-full bg-gray-100 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="file" name="postimage">
+
+        <label class="text-lg mb-1 text-gray-700 pt-4" for="title">Title:</label>
+        <input class="p-4 mb-5 rounded-lg border border-gray-300 text-gray-900 shadow-md box-border text-base" type="text" placeholder="title" name="title" required>
+
+        <label class="text-lg mb-1 text-gray-700" for="description">Description:</label>
+        <textarea class="resize-none h-40 p-4 mb-5 rounded-lg border border-gray-300 shadow-md box-border text-base text-gray-900" placeholder="description" name="description" required></textarea>
+
+        <input class="bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-lg text-lg transition duration-300 ease-in-out cursor-pointer hover: #45a049" type="submit" value="Create post">
+    </form>
+</div>
+</div>
+
+<% include ./partials/footer.ejs%>
